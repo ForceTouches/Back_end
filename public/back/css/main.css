@@ -1,0 +1,1549 @@
+/* Start Global */
+:root {
+    --main-color: #4f008c;
+    --primary-color: #ff375e;
+    --little-darker-color: #cacaca;
+    --dark-color: #707070;
+    --btn-text-color:#fff;
+    --input-txt-color: #2b2b2b;
+    --input-bg-color:#f8f8f8;
+    --input-border-color:#f8f8f8;
+    --table-bg-color:#f6f4f8;
+    --table-txt-color:#cacaca;
+    
+}
+@font-face {
+    font-family: HacenSaudiArabia;
+    src: url(../fonts/Hacen\ Saudi\ Arabia.ttf);
+  }
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'HacenSaudiArabia';
+}
+.btn,.btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 0;
+    outline: none;
+}
+.btn:focus {
+    box-shadow: none;
+}
+input {
+    outline: 0;
+    border: 0;
+}
+/* End Global*/
+
+
+/***********
+*Login Pages
+************/
+body.log-in section {
+    height: 100%;
+}
+body.log-in .row {
+    height: 100%;
+}
+body.log-in .row aside .content {
+    padding: 0 3rem;
+}
+body.log-in .row aside .content .logo img {
+    width: 125px;
+}
+body.log-in .row aside .content .login-text {
+    margin: 2.5rem 0;
+}
+body.log-in .row aside .content .login-text small {
+    color: var(--little-darker-color);
+    font-size: 1rem;
+}
+body.log-in .row aside .content form {
+    margin-bottom: 2rem;
+}
+body.log-in .row aside .content form input {
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+body.log-in .row aside .content form .input-feild input {
+    color: var(--input-txt-color);
+    border:1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
+}
+body.log-in .row aside .content form .input-feild input::placeholder {
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+body.log-in .row aside .content form .form-group .form-check-label {
+    margin-right: 1.2rem;
+}
+body.log-in .row aside .content form .btn {
+    color: var(--btn-text-color);
+    background-color: var(--main-color);
+}
+body.log-in .row aside .content .social-icon a {
+    text-decoration: none;
+}
+
+body.log-in .row aside .content .social-icon a i {
+    color: var(--little-darker-color);
+}
+body.log-in .row aside .content .social-icon a i:hover {
+    color: var(--primary-color);
+    transition: all 0.5s ease-in-out;
+}
+body.log-in .row .login-main-img {
+    background-image: url(../img/login-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+/**************
+*dash pages
+****************/
+
+/* start global style for every dash pages*/
+body.dash .dash-section {
+    height: 100%;
+    display: flex;
+}
+body.dash .dash-section aside {
+    height: 100%;
+    min-height: 600px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    width: max(15vw, 200px);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+body.dash .dash-section aside .side-top .control {
+    cursor: pointer;
+}
+body.dash .dash-section aside .side-top .control i {
+    color: var(--primary-color);
+}
+body.dash .dash-section aside .person-information .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--main-color);
+}
+body.dash .dash-section aside .person-information .name {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+body.dash .dash-section aside .person-information .name .flaticon-settings::before {
+    margin-left: 0;
+    position: relative;
+    left: 10px;
+    color: var(--primary-color);
+}
+body.dash .dash-section aside .person-information .position {
+    color: var(--little-darker-color);
+}
+body.dash .dash-section aside ul.links {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+body.dash .dash-section aside ul.links li {
+    list-style: none;
+    position: relative;
+    padding:0.5rem 1rem;
+    border-bottom: 1px solid var(--little-darker-color);
+}
+body.dash .dash-section aside ul.links li::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 28px;
+    top: 0;
+    right: 0;
+}
+body.dash .dash-section aside ul.links li a {
+    text-decoration: none;
+    font-weight: normal;
+}
+body.dash .dash-section aside ul.links li i {
+    font-weight: normal;
+}
+body.dash .dash-section aside ul.links li a,
+body.dash .dash-section aside ul.links li i {
+    color: var(--little-darker-color);
+}
+body.dash .dash-section aside ul.links li.active a,
+body.dash .dash-section aside ul.links li.active i{
+    color: var(--primary-color);
+}
+
+body.dash .dash-section main {
+    min-height: 600px;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+    margin-right: max(15vw, 200px);
+
+}
+body.dash .dash-section main .main-input i,
+body.dash .dash-section main .main-input input::placeholder {
+    color: var(--little-darker-color);
+}
+body.dash .dash-section main .main-input {
+    padding-bottom: 1rem;
+}
+body.dash .dash-section main .main-input i::before {
+    margin-left: 0.5rem;
+}
+
+body.dash .dash-section main .main-title {
+    border-top: 1px solid var(--little-darker-color);
+    border-bottom: 1px solid var(--little-darker-color);
+    color: var(--dark-color);
+    font-weight: normal;
+
+}
+
+.flaticon-minus:before,.flaticon-add:before {
+    margin: 0;
+}
+table thead {
+    font-size: 0.9rem;
+}
+table tbody {
+    font-size: 0.85rem;
+}
+body.dash .dash-users .main-cont .users-type-toggle,
+body.dash .dash-contests .main-cont .contests-type-toggle {
+    font-size: 1.1rem;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+/* End global style for every dash pages*/
+
+/* Start Settings Page*/
+body.dash .dash-settings .main-cont .accordion .card {
+    border: none;
+}
+body.dash .dash-settings .main-cont .accordion .card:first-child {
+    margin-bottom: 1rem;
+}
+body.dash .dash-settings .main-cont .accordion .card .card-header {
+    border-bottom: none;
+}
+body.dash .dash-settings .main-cont .accordion .card .card-header .btn {
+    background-color: unset;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 1rem;
+}
+body.dash .dash-settings .main-cont .accordion .card .btn i::before{
+    margin-left: 0;
+}
+
+body.dash .dash-settings .main-cont .accordion .card #collapseOne .card-body {
+    min-height: 150px;
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseOne select {
+    width: max(50%, 200px);
+    background-color: var(--input-bg-color);
+    border: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(20px) calc(1em + 5px), calc(25px) calc(1em + 5px), calc(2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .input-field input {
+    background-color: var(--input-border-color);
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .peson-img .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .peson-img input[type="file"] {
+    z-index: 9999;
+    opacity: 0;
+    width: 150px;
+    height: 45px;
+    right: 0;
+    position: absolute;
+    cursor: pointer
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .peson-img input[type="file"]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
+}
+
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .peson-img .image span {
+    width: 100px;
+    right: 0;
+    top: 0;
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .btn-change-img {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 1px solid var(--little-darker-color);
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .btn-change-img i {
+    margin-left: 10px;
+}
+body.dash .dash-settings .main-cont form .form-submit {
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--little-darker-color);
+}
+body.dash .dash-settings .main-cont form .form-submit .btn {
+    background-color: #fff;
+    color: var(--little-darker-color);
+    border: 1px solid var(--little-darker-color);
+    border-radius: 25px;
+    padding: 0.5rem 2.5rem;
+}
+body.dash .dash-settings .main-cont form .form-submit input[type="submit"] {
+    margin-left: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-color);
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseThree .card-body .remain-time{
+    width: max(200px, 30%);
+    background: var(--table-bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    color: #2b2b2b
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseThree .card-body .remain-time input {
+    width: max(200px, 30%);
+    background: var(--table-bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    color: #2b2b2b
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseFour .sub-title {
+    display: flex;
+    align-items: center;
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseFour .sub-title .sub-title-color {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseFour .sub-title .sub-title-txt {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseFour .collapse-sub {
+    border: 1px solid var(--little-darker-color);
+    margin-top: 0.5rem;
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseFour .colors-ditails .colors-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseFour .colors-ditails .colors-row:first-child {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--little-darker-color);
+}
+body.dash .dash-settings .main-cont .accordion .card #collapseFour .colors-ditails .colors-row input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    /* background-color only for content */
+    background-clip: content-box;
+    margin: 0.25rem 0.5rem;
+    border: 1px solid;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  
+body.dash .dash-settings .main-cont .accordion .card #collapseOne,
+body.dash .dash-settings .main-cont .accordion .card #collapseTwo,
+body.dash .dash-settings .main-cont .accordion .card #collapseThree {
+    font-size: 0.9rem;
+}
+/* End Settings Page*/
+
+/* Start main page */
+body.dash .dash-mainPage .content {
+    height: 100%;
+}
+body.dash .dash-mainPage .main-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.dash .dash-mainPage .main-cont .pages-links {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+body.dash .dash-mainPage .main-cont .pages-links .p-link {
+    padding: 1rem;
+}
+body.dash .dash-mainPage .main-cont .pages-links .p-link .card {
+    height: 200px;
+    border-radius: 19px;
+    box-shadow: 0 1px 28px 0 rgba(0, 0, 0, 0.03);
+    border: solid 0.5px #e8e8e8;
+    background-color: #ffffff;
+}
+body.dash .dash-mainPage .main-cont .pages-links .p-link .card:hover {
+    box-shadow: 0 1px 28px 0 rgb(255 55 94 / 0.3);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-mainPage .main-cont .pages-links .p-link .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 0;
+}
+body.dash .dash-mainPage .main-cont .pages-links .p-link .card-body a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+body.dash .dash-mainPage .main-cont .pages-links .p-link .card-body a .pageLink-cont {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+body.dash .dash-mainPage .main-cont .pages-links .p-link .card-body a .pageLink-cont [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 2.5rem;
+}
+/* End main page */
+
+/* Start ads page*/
+body.dash .dash-ads .main-title .btn-newAds {
+    background-color: var(--primary-color);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+body.dash .dash-ads .main-title .btn-newAds i::before {
+    margin-left: 10px;
+    
+}
+body.dash .dash-ads .main-cont table {
+    width: max(745px, 100%);
+    text-align: center;
+}
+body.dash .dash-ads .main-cont table thead {
+    background-color: var(--little-darker-color);
+    color: #6b6b6b;
+}
+body.dash .dash-ads .main-cont table tbody {
+    color: var(--table-txt-color);
+}
+body.dash .dash-ads .main-cont .table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--table-bg-color);
+}
+body.dash .dash-ads .main-cont table .btn-adjustAds,
+body.dash .dash-ads .main-cont table .btn-delAds {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: var(--table-txt-color);
+}
+body.dash .dash-ads .main-cont .table-striped tbody tr:hover,
+body.dash .dash-ads .main-cont .table-striped tbody tr:hover .btn-adjustAds,
+body.dash .dash-ads .main-cont .table-striped tbody tr:hover .btn-delAds {
+    color: var(--primary-color);
+    transition: all 0.5s ease-in-out;
+}
+body.dash .dash-ads .main-cont table .btn-adjustAds:focus,
+body.dash .dash-ads .main-cont table .del-ads:focus {
+    outline: 0;
+}
+
+body.dash .dash-ads .main-cont table .btn-adjustAds i::before,
+body.dash .dash-ads .main-cont table .del-ads i::before {
+    margin-left: 5px;
+}
+/* End ads page */
+
+/* Start reports page*/
+body.dash .dash-reports .main-cont table {
+    width: max(845px, 100%);
+    text-align: center;
+}
+body.dash .dash-reports .main-cont table thead {
+    background-color: var(--little-darker-color);
+    color: #6b6b6b;
+}
+body.dash .dash-reports .main-cont table tbody {
+    color: var(--table-txt-color);
+}
+body.dash .dash-reports .main-cont .table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--table-bg-color);
+}
+
+body.dash .dash-reports .main-cont .table-striped tbody tr:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+body.dash .modal-showReport table tbody td .custom-control-label {
+    cursor: pointer;
+}
+
+/*End reports page*/
+
+/* Start contests page*/
+body.dash .dash-contests .main-cont .contests-type-toggle {
+    display: flex;
+    border-bottom: 1px solid var(--little-darker-color);
+}
+body.dash .dash-contests .main-cont .contests-type-toggle > div {
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table {
+    width: max(935px, 100%);
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table thead,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table thead  {
+    background-color: var(--little-darker-color);
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr {
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody a,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody a {
+    text-decoration: none;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody button:focus,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody button:focus{
+    outline: 0;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody td.flag,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody td.flag {
+    width: 60px;
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .flag img,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .flag img {
+    width: 100%;
+}
+
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody i::before,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody i::before {
+    margin:0;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .icon i {
+    text-align: center;
+    background-color: var(--little-darker-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .icon-gift i::before,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .social-icons .icon i::before,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .icon-gift i::before,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .place-icon .icon i::before {
+    font-size: 15px;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .social-icons i.flaticon-twitter::before,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .place-icon i.flaticon-twitter::before {
+    margin-top: 5px;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .social-icons .icon,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .place-icon .icon {
+    margin-left: 10px;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .social-icons .icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .place-icon .icon i {
+    background-color:var(--little-darker-color);
+    color: #fff;
+    border: 1px solid var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .custom-control-label::before,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .custom-control-label::before {
+    background-color: var(--little-darker-color);
+    border-color: var(--little-darker-color);
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .custom-control-input:checked~.custom-control-label::before,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.custom-switch .custom-control-label::after {
+    background-color: #ffffff;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .set-icon,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .show-icon,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .btn-delContest,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .set-icon,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .show-icon,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .btn-delContest {
+    background-color: transparent;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .set-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .show-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody .btn-delContest i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .set-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .show-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody .btn-delContest i{
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-contests .main-cont .contests-type-cont table tbody td .custom-switch label {
+    cursor: pointer;
+}
+/*End contests page*/
+
+/*Start contest Details page*/
+body.dash .dash-contests-details .main-cont .contest-name-section {
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right:2rem ;
+}
+body.dash .dash-contests-details .main-cont .contest-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-color);
+    margin-left: 1rem;
+}
+body.dash .dash-contests-details .main-cont .contest-icon i::before {
+    font-size: 50px;
+    margin-left: 0;
+    color: #fff;
+}
+body.dash .dash-contests-details .main-cont .contest .name {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+body.dash .dash-contests-details .main-cont .contest .location {
+    color: var(--little-darker-color);
+}
+body.dash .dash-contests-details .main-cont .contest .location i::before {
+    margin-left: 5px;
+}
+body.dash .dash-contests-details .main-cont .control-section .control-one button{
+    background-color: transparent;
+    outline: 0;
+}
+body.dash .dash-contests-details .main-cont .control-section .control-one button i {
+    color: var(--primary-color);
+}
+body.dash .dash-contests-details .main-cont .control-section .control-one button i::before {
+    font-size: 1.5rem;
+}
+body.dash .dash-contests-details .main-cont .control-section .control-one .custom-switch .custom-control-label {
+    cursor: pointer;
+}
+body.dash .dash-contests-details .main-cont .control-section .control-one .custom-switch .custom-control-label::after {
+    background-color: #ffffff;
+}
+
+body.dash .dash-contests-details .main-cont .control-section .control-one .custom-control-label::before {
+    background-color: var(--little-darker-color);
+    border-color: var(--little-darker-color);
+}
+body.dash .dash-contests-details .main-cont .control-section .control-one .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+body.dash .dash-contests-details .main-cont .control-section .control-two .btn{ 
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+}
+body.dash .dash-contests-details .main-cont .control-section .control-two .agree-btn {
+    margin-left: 0.5rem;
+}
+body.dash .dash-contests-details .main-cont .contest-gift-section .contest-gift-title,
+body.dash .dash-contests-details .main-cont .remain-time-section .remain-time-title,
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-title,
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-owner-title {
+    border-top:1px solid var(--little-darker-color);
+    border-bottom:1px solid var(--little-darker-color);
+    font-weight: 500;
+}
+body.dash .dash-contests-details .main-cont .contest-gift-section .contest-gift-cont {
+    font-weight: normal;
+    font-size: 3rem;
+}
+body.dash .dash-contests-details .main-cont .remain-time-section .remain-time-title .date {
+    color:var(--little-darker-color);
+}
+body.dash .dash-contests-details .main-cont .remain-time-section .remain-time-cont {
+    width: fit-content;
+    border: 1px solid var(--little-darker-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: var(--main-color);
+}
+body.dash .dash-contests-details .main-cont .remain-time-section .remain-time-cont .remain-txt {
+    color: var(--primary-color)
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont a {
+    text-decoration: none;
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont .icon i {
+    text-align: center;
+    background-color: var(--little-darker-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont .icon i::before {
+    margin-left: 0;
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont i.flaticon-twitter::before {
+    margin-top: 5px;
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont .icon {
+    margin-left: 10px;
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont .icon i{
+    background-color:#fff;
+    color: var(--primary-color);
+    border: 1px solid var(--little-darker-color);
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont .icon i.activeSocial{
+    background-color:var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--little-darker-color);
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-owner-cont .person-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--main-color);
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-owner-cont .person-details {
+    color: var(--little-darker-color);
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-owner-cont .person-details .name .txt {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 0.75rem;
+}
+body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-owner-cont .person-details .name i::before{
+    color: var(--primary-color);
+    margin: 0;
+}
+.message {
+    color: #fff;
+    background-color: var(--primary-color);
+    width: 200px;
+    position: fixed;
+    top: 250px;
+    left: 0;
+    text-align: center;
+    font-size: 20px;
+}
+.message .message-txt {
+    font-weight: normal !important;
+}
+
+/*End contest Details page*/
+
+/* Start Users Page*/
+body.dash .dash-users .main-cont .main-title-cont {
+    border-bottom: 1px solid var(--little-darker-color);
+    border-top: 1px solid var(--little-darker-color);
+}
+body.dash .dash-users .main-cont .btn-newManegar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: max-content;
+}
+body.dash .dash-users .main-cont .btn-newManegar i::before {
+    margin-left: 10px;
+    
+}
+body.dash .dash-users .main-cont .users-type-toggle {
+    display: flex;
+}
+body.dash .dash-users .main-cont .users-type-toggle > div {
+    padding: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+body.dash .dash-users .main-cont .newManegar {
+    padding-bottom: 0.5rem;
+}
+body.dash .dash-users .main-cont .users-type-cont {
+    position: relative;
+}
+body.dash .dash-users .main-cont .users-type-cont table {
+    width: max(935px, 100%);
+}
+body.dash .dash-users .main-cont .users-type-cont table thead {
+    background-color: var(--little-darker-color);
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody tr {
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+
+body.dash .dash-users .main-cont .users-type-cont table tbody button:focus{
+    outline: 0;
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody i::before {
+    margin:0;
+}
+
+body.dash .dash-users .main-cont .users-type-cont table tbody .custom-control-label::before {
+    background-color: var(--little-darker-color);
+    border-color: var(--little-darker-color);
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.custom-switch .custom-control-label::after {
+    background-color: #ffffff;
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody .show-icon i,
+body.dash .dash-users .main-cont .users-type-cont table tbody .btn-delUser i,
+body.dash .dash-users .main-cont .users-type-cont table tbody .btn-delManeger i,
+body.dash .dash-users .main-cont .users-type-cont table tbody .adjust-maneger i{
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody td .custom-switch label {
+    cursor: pointer;
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody .person-image {
+    width: 60px;
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody .person-image img {
+    filter: opacity(0.5);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users .main-cont .users-type-cont .users-cont,
+body.dash .dash-users .main-cont .users-type-cont .manegers-cont {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+/* End Users Page*/
+
+/*Start users-details*/
+body.dash .dash-users-details .main-input input {
+    border-bottom: 1px solid var(--little-darker-color);
+}
+body.dash .dash-users-details .main-cont .person-info .info .person-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--main-color);
+}
+body.dash .dash-users-details .main-cont .person-info .info .person-details {
+    color: var(--little-darker-color);
+}
+body.dash .dash-users-details .main-cont .person-info .info .person-details .name .txt {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 0.75rem;
+}
+body.dash .dash-users-details .main-cont .person-info .info .person-details .name i::before{
+    color: var(--primary-color);
+    margin: 0;
+}
+body.dash .dash-users-details .main-cont .person-info .control .btn-delUser {
+    outline: 0;
+}
+body.dash .dash-users-details .main-cont .person-info .control .btn-delUser i::before,
+body.dash .dash-users-details .main-cont .person-info .control .btn-delManeger i::before {
+    color: var(--primary-color);
+}
+.custom-control-label::before {
+    background-color: #fff;
+    border-color: var(--primary-color);
+}
+body.dash .dash-users-details .custom-switch .custom-control-label::after {
+    background-color: var(--primary-color);
+}
+
+body.dash .dash-users-details .main-cont .person-info .control .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+body.dash .dash-users-details .main-cont .person-info .control .custom-control-input:checked~.custom-control-label::after {
+    background-color: #fff;
+}
+
+body.dash .dash-users-details .main-cont .person-info .control .custom-switch label {
+    cursor: pointer;
+}
+
+body.dash .dash-users-details .main-cont .user-contests .user-contests-title {
+    border-bottom: 1px solid var(--little-darker-color);
+    border-top: 1px solid var(--little-darker-color);
+    padding: 1rem 0;
+}
+
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table{
+    width: max(935px, 100%);
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table thead {
+    background-color: var(--little-darker-color);
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr {
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody a {
+    text-decoration: none;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody button:focus{
+    outline: 0;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody td.flag{
+    width: 60px;
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .flag img{
+    width: 100%;
+}
+
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody i::before{
+    margin:0;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .icon i {
+    background-color: var(--little-darker-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .icon-gift i::before,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .social-icons .icon i::before {
+    font-size: 15px;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .social-icons i.flaticon-twitter::before {
+    margin-top: 5px;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .social-icons .icon {
+    margin-left: 10px;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .social-icons .icon i {
+    background-color:var(--little-darker-color);
+    color: #fff;
+    border: 1px solid var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .custom-control-label::before{
+    background-color: var(--little-darker-color);
+    border-color: var(--little-darker-color);
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .custom-switch .custom-control-label::after {
+    background-color: #ffffff;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .set-icon,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .show-icon,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .btn-delContest {
+    background-color: transparent;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .set-icon i,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .show-icon i,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody .btn-delContest i{
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody td .custom-switch label {
+    cursor: pointer;
+}
+/*End users-details*/
+
+
+
+/*************
+modals style
+*************/
+/* Start General Style*/
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal button.close {
+    position: relative;
+    outline: 0;
+    border: 0;
+    opacity: 1;
+}
+.modal button.close span {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-title {
+    font-size: 1.1rem;
+}
+/* End General Style*/
+
+/* Start add new & adjust new Modal*/
+
+.modal-newAds .modal-body .form-group,
+.modal-adjustAds .modal-body .form-group {
+    margin-bottom: 0;
+}
+.modal-newAds .modal-body .form-group .all-inputs,
+.modal-adjustAds .modal-body .form-group .all-inputs {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-newAds .modal-body .form-group .column,
+.modal-adjustAds .modal-body .form-group .column {
+    margin: 0.25rem 0;
+}
+.modal-newAds .modal-body .form-group .form-control,
+.modal-adjustAds .modal-body .form-group .form-control {
+    border: 0;
+    background-color: var(--input-bg-color);
+}
+.modal-newAds .modal-body .form-group .input-file .inp-assets,
+.modal-adjustAds .modal-body .form-group .input-file .inp-assets {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.modal-newAds .modal-body .form-group .input-file .inp-assets i::before,
+.modal-adjustAds .modal-body .form-group .input-file .inp-assets i::before  {
+    margin-left: 0;
+    color: var(--primary-color);
+}
+.modal-newAds .modal-body .form-group .input-file input[type="file"],
+.modal-adjustAds .modal-body .form-group .input-file input[type="file"] {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+}
+.modal-newAds .modal-body .form-group .input-file input[type="file"]::-webkit-file-upload-button,
+.modal-adjustAds .modal-body .form-group .input-file input[type="file"]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
+}
+.modal-newAds .btn-addnewAds,
+.modal-adjustAds .btn-adjustAds,
+.modal-adjustManeger .btn-adjustManeger {
+    padding: 0.75rem 3rem !important;
+    font-weight: 100 !important;
+    font-size: 1rem !important;
+    opacity: 1 !important;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-shadow: none !important;
+    line-height: 1;
+}
+/* End add new & adjust Modal*/
+
+/*Start Add new & Adjust Maneger Model*/
+.modal-newManegar .form-group,
+.modal-adjustManeger .form-group {
+    border-bottom: 1px solid var(--little-darker-color);
+}
+.modal-newManegar .input-field input,
+.modal-adjustManeger .input-field input {
+    background-color: var(--input-border-color);
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.modal-newManegar .peson-img .image,
+.modal-adjustManeger .peson-img .image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+.modal-newManegar .peson-img input[type="file"],
+.modal-adjustManeger .peson-img input[type="file"] {
+    z-index: 9999;
+    opacity: 0;
+    width: 150px;
+    height: 45px;
+    right: 0;
+    position: absolute;
+    cursor: pointer
+}
+.modal-newManegar .peson-img input[type="file"]::-webkit-file-upload-button,
+.modal-adjustManeger .peson-img input[type="file"]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
+}
+
+.modal-newManegar .peson-img .image span,
+.modal-adjustManeger .peson-img .image span {
+    width: 80px;
+    right: 0;
+    top: 0;
+}
+.modal-newManegar .btn-change-img,
+.modal-adjustManeger .btn-change-img {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 1px solid var(--little-darker-color);
+}
+.modal-newManegar .btn-change-img i::before,
+.modal-adjustManeger .btn-change-img i::before {
+    margin-left: 10px;
+}
+/*End Add new & Adjust Maneger Model*/
+
+/* Start Delete Modal*/
+.modal-delAds .modal-footer #cansel-btn,
+.modal-delContest .modal-footer #cansel-btn,
+.modal-delContestditails .modal-footer #cansel-btn,
+.modal-delUserItem .modal-footer #cansel-btn,
+.modal-delReport .modal-footer #cansel-btn {
+    padding: 0.75rem 3rem;
+    font-weight: 100;
+    font-size: 1rem;
+    opacity: 1 !important;
+    background-color: #fff;
+    color: #707070;
+    border: 1px solid #707070;
+    line-height: 1;
+}
+.modal-delAds .modal-footer .btn-delAds,
+.modal-delContest .modal-footer .btn-delContest,
+.modal-delContestditails .modal-footer .btn-delContest,
+.modal-delUserItem .modal-footer .btn-delUserItem,
+.modal-delReport .modal-footer .btn-delReport {
+    padding: 0.75rem 3rem !important;
+    font-weight: 100 !important;
+    font-size: 1rem !important;
+    opacity: 1 !important;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-shadow: none !important;
+    line-height: 1;
+}
+/* End Delete Modal*/
+
+/*Start Report Modal*/
+.report-details .details .content .cell-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.report-details .details .content .cell-cont {
+    color: var(--little-darker-color);
+}
+.report-details .details .btn-delReport .btn {
+    background-color: #fff;
+    color: #707070;
+    border: 1px solid #707070;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.report-details .report-txt {
+    padding: 1rem;
+    border: solid 1px #f8f8f8;
+    background-color: #f8f8f8;
+    -webkit-border-radius: 150px 150px 0px 150px;
+    -moz-border-radius: 150px 150px 0px 150px;
+    border-radius: 150px 150px 0px 150px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+.contest-details .contest-details-title {
+    border-top: 1px solid var(--little-darker-color);
+    border-bottom: 1px solid var(--little-darker-color);
+    color: var(--dark-color);
+    font-weight: normal;
+}
+.contest-details .contest-details-table {
+    width: max(935px, 100%);
+}
+.contest-details .contest-details-table thead {
+    background-color: var(--little-darker-color);
+}
+.contest-details .contest-details-table tbody tr {
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody a {
+    text-decoration: none;
+}
+.contest-details .contest-details-table tbody button:focus{
+    outline: 0;
+}
+.contest-details .contest-details-table tbody td.flag {
+    width: 60px;
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody .flag img {
+    width: 100%;
+}
+.contest-details .contest-details-table tbody i::before {
+    margin:0;
+}
+.contest-details .contest-details-table tbody .icon i {
+    text-align: center;
+    background-color: var(--little-darker-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody .icon-gift i::before,
+.contest-details .contest-details-table tbody .social-icons .icon i::before {
+    font-size: 15px;
+}
+.contest-details .contest-details-table tbody .social-icons i.flaticon-twitter::before {
+    margin-top: 5px;
+}
+.contest-details .contest-details-table tbody .social-icons .icon {
+    margin-left: 10px;
+}
+.contest-details .contest-details-table tbody .social-icons .icon i {
+    background-color:var(--little-darker-color);
+    color: #fff;
+    border: 1px solid var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody .custom-control-label::before {
+    background-color: var(--little-darker-color);
+    border-color: var(--little-darker-color);
+}
+.contest-details .contest-details-table tbody .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.custom-switch .custom-control-label::after {
+    background-color: #ffffff;
+}
+.contest-details .contest-details-table tbody .set-icon,
+.contest-details .contest-details-table tbody .show-icon,
+.contest-details .contest-details-table tbody .btn-delContest {
+    background-color: transparent;
+}
+.contest-details .contest-details-table tbody .set-icon i,
+.contest-details .contest-details-table tbody .show-icon i,
+.contest-details .contest-details-table tbody .btn-delContest i{
+    color: var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/*End Report Modal*/
+
+
+
+/**********
+Media Quary
+***********/
+
+@media(max-width: 960px) {
+    body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body {
+        flex-direction: column-reverse;
+    }
+    body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .inputs,
+    body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .inputs .input-feild {
+        padding: 0 !important;
+    }
+    body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .peson-img {
+        margin-bottom: 1rem;
+    }
+    
+
+}
+@media(max-width:576px) {
+    body.dash .dash-contests .main-cont .contests-type-toggle {
+        flex-direction: column;
+    }
+    body.dash .dash-contests .main-cont .contests-type-toggle div {
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    body.dash .dash-contests-details .main-cont .contest-name-section {
+        justify-content: center;
+    }
+    body.dash .dash-contests-details .main-cont .contest-name-section .contest-name {
+        margin-bottom: 1rem;
+    }
+}
+@media(max-width: 475px) {
+    body.dash .dash-settings .main-cont .accordion .card #collapseOne .card-body,
+    body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .peson-img {
+        flex-direction: column;
+    }
+    body.dash .dash-settings .main-cont .accordion .card #collapseTwo .card-body .peson-img .btn-imgChange {
+        margin-top: 1rem;
+    }
+    body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont .icon i {
+        width: 30px;
+        height: 30px;
+    }
+    body.dash .dash-contests-details .main-cont .contest-moreDetails-section .contest-urls-cont .icon i::before {
+        font-size: 1rem;
+    }
+    body.dash .dash-users .main-cont .btn-newManegar {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    body.dash .dash-users .main-cont .users-type-toggle {
+        width: min-content;
+    }
+    body.dash .dash-users .main-cont .users-type-toggle .users {
+        margin: 0;
+    }
+    body.dash .dash-settings .main-cont .accordion .card #collapseFour .card-body {
+        padding-left: 0;
+    }
+    body.dash .dash-settings .main-cont .accordion .card #collapseFour .card {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media(max-width: 320px) {
+    body.dash .dash-ads .main-title .btn-newAds {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        font-size: 0.8rem;
+    }
+    body.dash .dash-ads .main-title .btn-newAds i::before {
+        margin-left: 3px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+/*************************
+custom classes for jequer
+*************************/
+
+body.dash.side-nav-small aside {
+    width: max(4vw, 60px);
+    transition: all 0.3s ease-in-out;
+}
+body.dash.side-nav-small aside .side-top {
+    justify-content: center !important;
+}
+body.dash.side-nav-small aside .person-information {
+    display: none !important;
+}
+body.dash.side-nav-small aside ul li {
+    font-size: 0;
+    padding: 0.5rem 0 !important;
+}
+body.dash.side-nav-small aside ul li a {
+    display: flex !important;
+    justify-content: center !important;
+}
+body.dash.side-nav-small aside ul li a i::before {
+    margin-left: 0;
+}
+body.dash.side-nav-small main {
+    margin-right: max(4vw, 60px);
+    transition: all 0.3s ease-in-out;
+}
+.hidden {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 400ms;
+}
+.visible {
+    transition: opacity 400ms ease-in-out;
+    z-index: 1;
+  }
+  .hide {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 200ms;
+  }
+
+/*custom acive row*/
+.contest-details .contest-details-table tbody tr.active-row,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr.active-row,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row {
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody tr.active-row .flag,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row .flag,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr.active-row .flag,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row .flag {
+    filter: grayscale(0);
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody tr.active-row .icon-gift i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row .icon-gift i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr.active-row .icon-gift i,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row .icon-gift i{
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody tr.active-row .social-icons .icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row .social-icons .icon i,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row .social-icons .icon i{
+    background-color:#fff;
+    color: var(--primary-color);
+    border: 1px solid var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+.contest-details .contest-details-table tbody tr.active-row .social-icons .icon i.activeSocial,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row .social-icons .icon i.activeSocial,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row .social-icons .icon i.activeSocial{
+    background-color:var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--little-darker-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr.active-row .place-icon .icon i{
+    background-color:var(--primary-color);
+    color:#fff;
+    border: 1px solid var(--little-darker-color);
+}
+
+.contest-details .contest-details-table tbody tr.active-row .set-icon i,
+.contest-details .contest-details-table tbody tr.active-row .show-icon i,
+.contest-details .contest-details-table tbody tr.active-row .btn-delContest i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row .set-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row .show-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-social-cont table tbody tr.active-row .btn-delContest i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr.active-row .set-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr.active-row .show-icon i,
+body.dash .dash-contests .main-cont .contests-type-cont .contests-place-cont table tbody tr.active-row .btn-delContest i,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row .set-icon i,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row .show-icon i,
+body.dash .dash-users-details .main-cont .user-contests .user-contests-cont table tbody tr.active-row .btn-delContest i
+{
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+body.dash .dash-users .main-cont .users-type-cont table tbody tr.active-row {
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody tr.active-row .show-icon i,
+body.dash .dash-users .main-cont .users-type-cont table tbody tr.active-row .btn-delUser i,
+body.dash .dash-users .main-cont .users-type-cont table tbody tr.active-row .btn-delManeger i,
+body.dash .dash-users .main-cont .users-type-cont table tbody tr.active-row .adjust-maneger i {
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+body.dash .dash-users .main-cont .users-type-cont table tbody tr.active-row .person-image img {
+    filter: opacity(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.set i {
+    color: var(--primary-color) !important;
+    transition: all 0.3s ease-in-out;
+}
+.unset i{
+    color: var(--little-darker-color) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.contest-type-active,
+.users-type-active {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.active-color {
+    border-color:var(--dark-color) !important;
+    transition: border-color 0.3s ease-in-out;
+}
+
